@@ -2,11 +2,11 @@
 
 This application is a simple Windows Forms Application on .NET 6.0 that is meant to:
 
-1. Report the number of clicks that a user takes anywhere on their windows system to a click server
+1. Report the number of clicks that a user makes anywhere on their windows system to a click server
 2. Poll the click server to see what the aggregated number of the clicks is
 3. Allow the user to reset their click count
 
-The server in question: https://github.com/JanusHealthInc/node-click-counter
+The click server in question: https://github.com/JanusHealthInc/node-click-counter
 
 ## Interview Start:
 
@@ -18,20 +18,20 @@ The server in question: https://github.com/JanusHealthInc/node-click-counter
 
 ### Prompts
 
-1. SystemObserver is written to listen for a Mouse Low Level Event, however it needs to have a way for us to 
-be able to send this information to the server. Please update the API.
+1. Form1.cs is written with a dummy counter function.  Please wire it to connect to the API.
+
+2. SystemObserver is written to listen for a Mouse Low Level Event, however it needs to have a way for us to 
+be able to send this information to the server. Please update the mouseHookProc() method.
 
 	- A way to send the API data
 
 	- Actually implementing the mouseHookProc() method
 
-2. Form1.cs is written with a dummy counter function.  Please wire it to connect to the API.
-
 **Milestone 1:** The application should be tallying clicks
 
 3. Please add a Button to reset the click count on the server
 
-**Milestone 2:** The application should reset itself
+**Milestone 2:** The application should reset the click value on refresh
 
 4. Let's modify the server and application to track and report left and right clicks
 
